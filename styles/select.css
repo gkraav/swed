@@ -1,0 +1,42 @@
+.custom-select {
+  position: relative;
+  min-width: 100px;
+  max-height: 31px;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  font-size: initial;
+  padding: 6px 10px;
+  background-color: var(--color-mist);
+  border: 1px solid rgb(188, 216, 219);
+  border-radius: 2px;
+  color: rgb(81, 43, 43);
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.custom-select::before,
+.custom-select::after {
+  --size: 5px;
+  content: "";
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+}
+
+.custom-select::before {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-bottom: var(--size) solid rgb(81, 43, 43);
+  top: 30%;
+}
+
+.custom-select::after {
+  border-left: var(--size) solid transparent;
+  border-right: var(--size) solid transparent;
+  border-top: var(--size) solid rgb(81, 43, 43);
+  top: 55%;
+}
